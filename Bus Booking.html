@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bus Booking</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="booking" class="section">
+      <div class="section-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-md-push-5">
+              <div class="booking-cta">
+                <h1>Thanks for coming</h1>
+                <h5>
+                  we are looking forward to celebrate our big day with you
+                </h5>
+                <hr />
+                <p>
+                  we have arranged transportation from Pulamon Town, Kottarakara
+                  to the Reception venue and vice versa. if you wish to avail
+                  this facility please register here. please ensure you are
+                  using your whatsapp number to registerupdates will be
+                  initimdated via whatsapp.<br />
+                  <br />
+                  <br />
+
+                  with Love<br />
+                  -Sajan and Nisha
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 col-md-pull-7">
+              <div class="booking-form">
+                <form>
+                  <div class="form-group">
+                    <span class="form-label">Your Name</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First Name"
+                      value=""
+                      autocomplete="off"
+                      id="namein"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <span class="form-label">Your Whatsapp Number</span>
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="form-control intl-tel-input"
+                      placeholder="Phone Number"
+                      name="name"
+                      value=""
+                      autocomplete="off"
+                    />
+
+                    &nbsp&nbsp&nbsp
+
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      onclick="otp()"
+                    >
+                      Get OTP
+                    </button>
+                  </div>
+
+                  <div class="form-group">
+                    <span class="form-label"
+                      >Enter OTP Received in Whatsapp</span
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="OTP"
+                      name="name"
+                      id="otpin"
+                      autocomplete="off"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      onclick="otpverifytest()"
+                    >
+                      verify
+                    </button>
+                  </div>
+
+                  <div class="form-group">
+                    <span class="form-label">Number of People</span>
+                    <span class="select-arrow form-control">
+                      <select class="" id="count">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                      </select>
+                    </span>
+                  </div>
+
+                  <div class="form-btn">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      onclick="book()"
+                    >
+                      Confirm Booking
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      #otpin {
+        width: auto;
+      }
+
+      .form-group input,
+      .form-group button {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .section {
+        position: relative;
+        height: 100vh;
+      }
+
+      .section .section-center {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+
+      #booking {
+        font-family: montserrat, sans-serif;
+        background-image: url(../img/background.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      #booking::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: rgba(47, 103, 177, 0.6);
+      }
+
+      .booking-form {
+        background-color: #fff;
+        padding: 50px 20px;
+        -webkit-box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+      }
+
+      .booking-form .form-group {
+        margin-bottom: 30px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .booking-form .form-control {
+        background-color: #ebecee;
+        border-radius: 4px;
+        height: 40px;
+        box-shadow: none;
+        color: #3e485c;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .booking-form .form-label {
+        color: #3e485c;
+        font-weight: 700;
+        margin-bottom: 6px;
+        margin-left: 7px;
+      }
+
+      .booking-form .submit-btn:hover,
+      .booking-form .submit-btn:focus {
+        opacity: 0.9;
+      }
+
+      .booking-cta {
+        margin-top: 80px;
+        margin-bottom: 30px;
+      }
+
+      .booking-cta h1 {
+        font-size: 52px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      p {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        color: #fff;
+      }
+    </style>
+
+    <script>
+      // Initialize the intl-tel-input library
+      const input = document.querySelector(".intl-tel-input");
+      const iti = window.intlTelInput(input, {
+        preferredCountries: ["in", "us", "gb"], // Set the preferred countries
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js", // Load the utils.js file
+      });
+
+      function showPhoneNumber() {
+        var countryCode = iti.getSelectedCountryData().dialCode;
+        var phoneNumber = document.getElementById("phone").value;
+        alert(
+          "Country Code: " + countryCode + "\nPhone Number: " + phoneNumber
+        );
+      }
+      let x = 784544444987411254782226966977122365789644998744111213660;
+      function otp() {
+        var password = Math.floor(100000 + Math.random() * 90000);
+        //alert(password);
+        x = password;
+        alert(x);
+      }
+
+      function otpverifytest() {
+        var otpnow = document.getElementById("otpin").value;
+        if (otpnow == x) {
+          alert("otp match");
+        } else {
+          alert("otp dont match");
+        }
+      }
+
+      function book() {
+        var name = document.getElementById("namein").value;
+        var number = document.getElementById("count").value;
+        // alert("we have recieved booking for" + number + "people");
+        alert(
+          `Dear ${name}, we have recieved booking for ${number} people. details will be send via whatsapp number provided.`
+        );
+      }
+    </script>
+  </body>
+</html>

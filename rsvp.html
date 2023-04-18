@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSVP</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="rsvp" style="background-color: #f8e8e8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="wrapper1">
+            <h1>R.S.V.P</h1>
+            <img
+              class="rsvp-img"
+              src="https://img.freepik.com/free-vector/bride-groom-getting-married_23-2148404862.jpg?w=740&t=st=1680638399~exp=1680638999~hmac=36ec9da278966d57f95cc38871a3a941c8ac30a4acab20dc06c6d3df687337c4"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="col-md-6 wrapper2">
+          <div class="wrapper2">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="form-in"
+              required
+            />
+            <br /><br />
+            <input type="text" placeholder="Address" class="form-in" required />
+            <br /><br />
+
+            <input
+              type="text"
+              placeholder="Phone number"
+              class="form-in"
+              required
+            />
+            <br /><br />
+
+            <h3>Will you be attending our wedding?</h3>
+            <strong>
+              <input type="radio" name="check1" /><label>Yes </label>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              <input type="radio" name="check1" />
+              <label>No </label>
+            </strong>
+            <br /><br />
+            <strong>Number of people attending :</strong>
+            <select class="select-in" required>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+            <br /><br />
+
+            <textarea
+              rows="8"
+              class="form-in"
+              placeholder="please leave us your message"
+            ></textarea>
+            <br /><br />
+            <button type="submit" class="btn-custom">R.S.V.P</button>
+            <br /><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

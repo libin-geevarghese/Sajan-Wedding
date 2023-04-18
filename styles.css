@@ -1,0 +1,98 @@
+.banner {
+  background-color: aquamarine;
+}
+
+.date {
+  background-color: rgb(153, 255, 127);
+}
+
+.story {
+  background-color: rgb(161, 127, 255);
+}
+
+.events {
+  background-color: rgb(255, 225, 127);
+}
+
+.backend {
+  display: flex;
+}
+
+.img-backend {
+  display: block;
+  height: 40%;
+  max-width: 90%;
+  margin: auto;
+}
+
+.text-backend {
+  margin: 10%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.main-block {
+  display: flex;
+}
+
+.wrapper1 {
+  background-image: url();
+  align-items: center;
+  margin-top: 20%;
+}
+.wrapper2 {
+  align-items: center;
+  margin-top: 25%;
+  text-align: center;
+}
+
+.col-md-6 {
+  text-align: center;
+}
+
+.fas {
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.form-in {
+  width: 80%;
+  border-radius: 20px;
+}
+.select-in {
+  width: 10%;
+  border-radius: 20px;
+}
+
+.rsvp {
+  opacity: 0.9;
+}
+
+.rsvp-img {
+  width: 80%;
+  border-radius: 20px;
+}
+
+h1,
+strong,
+h3 {
+  font-family: "Lily Script One", cursive;
+  font: bold;
+  color: #8b4513;
+}
+
+h1 {
+  font-family: "Lily Script One", cursive;
+}
+.btn-custom {
+  background-color: #7e3d9e;
+  padding: 10px 20px;
+  color: aliceblue;
+
+  border-radius: 50px;
+  border-color: #7e3d9e;
+}
+
+button:hover {
+  background-color: #331941;
+}
